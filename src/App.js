@@ -31,12 +31,12 @@ class App extends Component {
           <Col sm={8}>B</Col>
         </Row>
         <Row>
-          <Col sm={true}>A</Col>
-          <Col sm={true}>B</Col>
+          <Col sm>A</Col>
+          <Col sm>B</Col>
         </Row>
         <Row>
-          <Col sm={true} md={5} lg={3} xl={2}>A</Col>
-          <Col sm={true} md={7} lg={9} xl={10}>B</Col>
+          <Col sm md={5} lg={3} xl={2}>A</Col>
+          <Col sm md={7} lg={9} xl={10}>B</Col>
         </Row>
         <div className='d-flex justify-content-around mt-3'>
           <Button title='Google' href='https://www.google.com/' />
