@@ -10,7 +10,7 @@ function classNameForWidth(width) {
   }
 }
 
-function classNameForSize(breakpoint, width) {
+function classNameForBreakpoint(breakpoint, width) {
   if (!width) {
     return ''
   }
@@ -34,10 +34,10 @@ const Col = ({
 }) => (
   <div className={[
     classNameForWidth(width),
-    classNameForSize('sm', sm),
-    classNameForSize('md', md),
-    classNameForSize('lg', lg),
-    classNameForSize('xl', xl)
+    classNameForBreakpoint('sm', sm),
+    classNameForBreakpoint('md', md),
+    classNameForBreakpoint('lg', lg),
+    classNameForBreakpoint('xl', xl)
   ].join(' ')}>
     { children }
   </div>
