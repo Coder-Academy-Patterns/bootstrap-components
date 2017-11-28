@@ -10,16 +10,17 @@ function classNameForWidth(width) {
   }
 }
 
-function classNameForSize(size, width) {
+function classNameForSize(breakpoint, width) {
   if (!width) {
     return ''
   }
   else if (width === true) {
-    return `col-${size}`
+    // e.g. col-sm
+    return `col-${breakpoint}`
   }
   else {
     // e.g. col-sm-6
-    return `col-${size}-${width}`
+    return `col-${breakpoint}-${width}`
   }
 }
 
