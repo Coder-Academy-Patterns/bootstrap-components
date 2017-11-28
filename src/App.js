@@ -9,11 +9,35 @@ import Card, { CardText } from './components/Card'
 import FormGroup from './components/FormGroup'
 import * as FormControls from './components/FormControls'
 import FormCheck from './components/FormCheck'
+// Grid
+import Container from './components/grid/Container'
+import Row from './components/grid/Row'
+import Col from './components/grid/Col'
 
 class App extends Component {
   render() {
     return (
-      <div className='container'>
+      <Container>
+        <Row>
+          <Col>A</Col>
+          <Col>B</Col>
+        </Row>
+        <Row>
+          <Col width={4}>A</Col>
+          <Col width={8}>B</Col>
+        </Row>
+        <Row>
+          <Col sm={4}>A</Col>
+          <Col sm={8}>B</Col>
+        </Row>
+        <Row>
+          <Col sm={true}>A</Col>
+          <Col sm={true}>B</Col>
+        </Row>
+        <Row>
+          <Col sm={true} md={5} lg={3} xl={2}>A</Col>
+          <Col sm={true} md={7} lg={9} xl={10}>B</Col>
+        </Row>
         <div className='d-flex justify-content-around mt-3'>
           <Button title='Google' href='https://www.google.com/' />
           <Button title='Second' variation='primary' />
@@ -81,7 +105,7 @@ class App extends Component {
             <Button submit title='Submit' />
           </form>
         </div>
-      </div>
+      </Container>
     );
   }
 }
